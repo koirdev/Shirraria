@@ -3,7 +3,7 @@ Game in development
 
 Game by koirdev
 
-# Shirraria Credits:
+# Credits:
 
 koirdev - Programmer, Artist, Composer
 
