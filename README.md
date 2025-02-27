@@ -9,7 +9,7 @@ koirdev - Programmer, Artist, Composer
 
 VENUX - Tester
 
-Vova - Tester
+James BoT - Tester
 
 MOTVER - Tester
 
