@@ -1,8 +1,4 @@
-# Shirraria Developer Version
-
-## Not for publishing
-
-### Game by koirdev
+# Shirraria
 
 # Credits:
 koirdev - Programmer, Artist, Composer
