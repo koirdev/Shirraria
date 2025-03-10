@@ -82,6 +82,7 @@ After opening the dist folder in the game, copy assets folder and create a 'scre
 - https://pypi.org/project/PyQt5/
 - https://pypi.org/project/pyscreenshot/
 
-- 
+
+
 ## Thank you for your attention!
 
