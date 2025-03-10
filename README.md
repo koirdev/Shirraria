@@ -45,7 +45,7 @@ https://pyinstaller.org/en/stable/
 
 2. Open CMD in the game folder, and enter this command:
 
-      ```pyinstaller main.py --console --onefile```
+      ```pyinstaller main.py --noconsole --onefile```
 
 After opening the dist folder in the game, copy assets folder and create a 'screenshots' folder
 
