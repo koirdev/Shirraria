@@ -1,4 +1,5 @@
 # Shirraria
+[License](LICENSE.md)
 
 # Credits:
 koirdev - Programmer, Artist, Composer
