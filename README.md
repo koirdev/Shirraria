@@ -32,9 +32,13 @@ MOTVER - Tester
 - PyQt5 (Message boxes)
 - pyscreenshot (Screenshots)
 
-# Installation
+# Installation:
 
-    ```git clone https://github.com/koirdev/Shirraria```
+1: Download [Git](https://git-scm.com)
+
+2: Open terminal and enter this command:
+
+ ```git clone https://github.com/koirdev/Shirraria```
 
 # Compile:
 
