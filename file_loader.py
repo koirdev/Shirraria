@@ -46,7 +46,7 @@ if DEBUG_MODE == 1:
 
 # Credits Info
 credits_title = credits_font.render("Shirraria Credits:",False,(252,250,250))
-credits_koirdev = credits_font.render("koirdev - Programmer, Artist, Composer",False,(252,250,250))
+credits_koirdev = credits_font.render("koirdev - Programmer, Artist",False,(252,250,250))
 credits_venux = credits_font.render("VENUX - Tester",False,(252,250,250))
 credits_JBoT = credits_font.render("James BoT - Tester",False,(252,250,250))
 credits_motver = credits_font.render("MOTVER - Tester",False,(252,250,250))
