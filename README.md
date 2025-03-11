@@ -2,7 +2,7 @@
 [License](LICENSE)
 
 # Credits:
-koirdev - Programmer, Artist, Composer
+koirdev - Programmer, Artist
 
 VENUX - Tester
 
