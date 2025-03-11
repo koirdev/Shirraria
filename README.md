@@ -84,6 +84,6 @@ After opening the dist folder in the game, copy assets folder and create a 'scre
 
 
 
-### Thank you for your attention!
+### **Thank you for your attention!**
 ##### Written with love
 
