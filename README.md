@@ -1,6 +1,7 @@
 # Shirraria
 [License](LICENSE)
 
+[Open Sans License](assets/fonts/open-sans-license.txt)
 # Credits:
 koirdev - Programmer, Artist
 
