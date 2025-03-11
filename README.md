@@ -56,7 +56,7 @@ https://pyinstaller.org/en/stable/
 
       ```pyinstaller main.py --noconsole --onefile```
 
-After opening the dist folder in the game, copy assets folder and create a 'screenshots' folder
+After that, open the dist folder in the game folder, copy the assets folder and create a "screenshots" folder.
 
 # Shirraria Configuration:
 
