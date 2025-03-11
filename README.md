@@ -14,7 +14,7 @@ MOTVER - Tester
 
 - Take a screenshot - '7' (saves in 'screenshots/scrsht1.png')
 - Credits Menu - 'C'
-- Quit the game - 'Q'
+- Quit from game - 'Q'
 - Change volume - 'F1' - off  'F2' - on
 - Back to the Main Menu - 'Backspace'
 
