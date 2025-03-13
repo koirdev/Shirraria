@@ -96,3 +96,5 @@ After that, open the dist folder in the game folder, copy the assets folder and 
 ### ***Thank you for your attention!***
 ##### *Written with love*
 
+## (**The game is not finished because I am porting it to pygame**)
+
