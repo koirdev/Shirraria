@@ -98,8 +98,10 @@ After that copy the 'assets' folder to the 'dist' folder and run the EXE file
 
 
 
+
+## (**The game is not finished because I am porting it to pygame**)
+
 ### ***Thank you for your attention!***
 ##### *Written with love*
 
-## (**The game is not finished because I am porting it to pygame**)
 
