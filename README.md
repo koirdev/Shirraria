@@ -62,7 +62,7 @@ After that, open the dist folder in the game folder, copy the assets folder and 
 # Shirraria Configuration:
 
 - ```WIDTH, HEIGHT``` - Screen Resolution
-- ```FPS``` - Number of frames *(To display the FPS value on the console, change the '**```DEBUG_MODE```**' value to '1')*
+- ```FPS``` - Number of frames *(To display the FPS value on the console, change the '```DEBUG_MODE```' value to '1')*
 - ```HARDWARE_RENDER``` - CPU Render
 - ```FULLSCREEN``` - Game in full screen
 - ```DEFAULT_WINDOW``` - Regular window
