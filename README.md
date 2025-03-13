@@ -4,6 +4,7 @@
 [Open Sans License](assets/fonts/open-sans-license.txt)
 
 [Go to '*backup*' branch](https://github.com/koirdev/Shirraria/tree/backup)
+[Go to '*dev*' branch](https://github.com/koirdev/Shirraria/tree/dev)
 
 # Credits:
 koirdev - Programmer, Artist
