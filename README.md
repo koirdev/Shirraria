@@ -52,7 +52,7 @@ MOTVER - Tester
 
 https://pyinstaller.org/en/stable/
 
-## Compiling for Windows:
+## Compiling for ***Windows***:
 
 1. Download PyInstaller library using command in CMD:
 
