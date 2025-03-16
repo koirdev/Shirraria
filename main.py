@@ -42,8 +42,8 @@ else:
 selected_section = 0
 
 # Section colors
-BLUE = (91, 207, 252)
-DARK_BLUE = (38, 109, 135)
+CYAN = (91, 207, 252)
+DARK_CYAN = (38, 109, 135)
 
 # Character position
 character_x = 400
@@ -122,9 +122,9 @@ def MainMenu():
         # Render Menu
             for i in range(len(items)):
                 if i == selected_section:
-                    menu_text = menu_font.render(items[i],0, BLUE)
+                    menu_text = menu_font.render(items[i],0, CYAN)
                 else:
-                    menu_text = menu_font.render(items[i],0, DARK_BLUE)
+                    menu_text = menu_font.render(items[i],0, DARK_CYAN)
                 menu_text_rect = menu_text.get_rect(center = (WIDTH // 1.25, 250+ 50 * i))
                 window.blit(menu_text, menu_text_rect)
 
