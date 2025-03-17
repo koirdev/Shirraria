@@ -19,7 +19,7 @@ SFX = None
 CURSOR = None
 LANG = None # en_us, en_uk, ru_lang
 SPLASHES = 1
-VERSION = 'Release Build (Alpha 0.1)'
+VERSION = 'Release Build (Early-Alpha 0.1)'
 LEVEL = 1
 
 #:TOOLS:
