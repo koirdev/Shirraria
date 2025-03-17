@@ -1,13 +1,6 @@
 # Shirraria
-[License](LICENSE)
 
-[Open Sans License](assets/fonts/open-sans-license.txt)
-
-[42dotSans License](assets/fonts/42dotSans-license.txt)
-
-[Go to '*backup*' branch](https://github.com/koirdev/Shirraria/tree/backup)
-
-[Go to '*dev*' branch](https://github.com/koirdev/Shirraria/tree/dev)
+*An open source game written using Python and the Pygame library* 
 
 # Credits:
 koirdev - Programmer, Artist
@@ -100,6 +93,21 @@ After that copy the 'assets' folder to the 'dist' folder and run the EXE file
 - https://pypi.org/project/PyQt5/
 - https://pypi.org/project/pyscreenshot/
 
+# License
+
+Released under [***MIT*** *License*](LICENSE)
+
+# Font licenses
+
+[Open Sans License](assets/fonts/open-sans-license.txt)
+
+[42dotSans License](assets/fonts/42dotSans-license.txt)
+
+# Branches
+
+[Go to '*backup*' branch](https://github.com/koirdev/Shirraria/tree/backup)
+
+[Go to '*dev*' branch](https://github.com/koirdev/Shirraria/tree/dev)
 
 
 
