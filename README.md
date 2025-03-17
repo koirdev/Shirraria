@@ -82,7 +82,7 @@ After that copy the 'assets' folder to the 'dist' folder and run the EXE file
 - ```VERSION``` - Game version
 - ```DISTRIBUTE_TEXT``` - Show text "DO NOT DISTRIBUTE"
 
-# All links:
+<!--# All links:
 
 - https://pygame.org
 - https://pypi.org/project/pygame
@@ -91,7 +91,7 @@ After that copy the 'assets' folder to the 'dist' folder and run the EXE file
 - https://pypi.org/project/pyinstaller
 - https://pyinstaller.org/en/stable/
 - https://pypi.org/project/PyQt5/
-- https://pypi.org/project/pyscreenshot/
+- https://pypi.org/project/pyscreenshot/!-->
 
 # License
 
