@@ -6,9 +6,9 @@ pygame.init()
 
 
 # Fonts
-font = pygame.font.Font('assets/fonts/funny_cute.ttf', 25)
-pause_tips_font = pygame.font.Font('assets/fonts/funny_cute.ttf', 25)
-pause_font = pygame.font.Font('assets/fonts/funny_cute.ttf', 55)
+font = pygame.font.Font('assets/fonts/42dotSans-Bold.ttf', 25)
+pause_tips_font = pygame.font.Font('assets/fonts/42dotSans-Bold.ttf', 25)
+pause_font = pygame.font.Font('assets/fonts/42dotSans-Bold.ttf', 55)
 if SPLASHES == 1:
     splash_text = pygame.font.Font('assets/fonts/Nepoboy-MVMaB.otf', 25)
 credits_font = pygame.font.Font('assets/fonts/MotleyForcesRegular-w1rZ3.ttf', 30)
