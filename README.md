@@ -2,6 +2,7 @@
 [License](LICENSE)
 
 [Open Sans License](assets/fonts/open-sans-license.txt)
+[42dotSans License](assets/fonts/42dotSans-license.txt)
 
 [Go to '*backup*' branch](https://github.com/koirdev/Shirraria/tree/backup)
 
