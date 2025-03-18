@@ -69,7 +69,7 @@ After that copy the 'assets' folder to the 'dist' folder and run the EXE file
 - ```FULLSCREEN``` - Game in full screen
 - ```DEFAULT_WINDOW``` - Regular window
 - ```RESIZABLE_WINDOW``` - Can resize the window
-- ```WARNING_MESSAGE``` - Showing message box "WARNING: DO NOT DISTRIBUTE"
+- ```WARNING_MESSAGE``` - Showing message box "WARNING: This build is unstable"
 - ```MUSIC``` - Off and on music
 - ```SFX``` - Off and on sound effects (in development)
 - ```CURSOR``` - Custom cursor (in development)
@@ -80,7 +80,7 @@ After that copy the 'assets' folder to the 'dist' folder and run the EXE file
 - ```SCREENSHOT``` - Screenshot Function
 - ```SPLASHES``` - Random splashes in title menu
 - ```VERSION``` - Game version
-- ```DISTRIBUTE_TEXT``` - Show text "DO NOT DISTRIBUTE"
+- ```WARNING_TEXT``` - Show text "This build is unstable!"
 
 <!--# All links:
 
