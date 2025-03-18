@@ -55,7 +55,7 @@ https://pyinstaller.org/en/stable/
 
 2. Open CMD in the game folder, and enter this command:
 
-      ```pyinstaller main.py --noconsole --onefile```
+      ```pyinstaller --noconsole -F --distpath exe -n shirraria main.py```
 
 After that copy the 'assets' folder to the 'dist' folder and run the EXE file
 
