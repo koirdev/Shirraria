@@ -81,6 +81,7 @@ After that copy the 'assets' folder to the 'exe' folder and run the EXE file
 - ```SPLASHES``` - Random splashes in title menu
 - ```VERSION``` - Game version
 - ```WARNING_TEXT``` - Show text "This build is unstable!"
+- ```CONTROLS``` - Controls (controller or keyboard) 1 - keyboard, 2 - controller
 
 <!--# All links:
 
