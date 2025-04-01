@@ -1,25 +1,24 @@
 #:SHIRRARIA_CONFIG:
 
 #:WINDOW_RESOLUTION:
-WIDTH = 1280
-HEIGHT = 720
+
+WIDTH = 1920		#1500 - for test
+HEIGHT = 1080		#1080 - for test
 
 
 #:SETTINGS:
 FPS = 60
-HARDWARE_RENDER = 0  # only on fullscreen
-FULLSCREEN = 0
-DEFAULT_WINDOW = 1
-RESIZABLE_WINDOW = 0
+WINDOW_MODE = 0 # 0 - default, 1 - resizable, 2 - fullscreen, 3 - hardware
 WARNING_MESSAGE = 0
-MUSIC = 1
-DISTRIBUTE_TEXT = 0
+MUSIC = 0
+WARNING_TEXT = 1
 SFX = None
 CURSOR = None
 LANG = None  # en_us, en_uk, ru_lang
 SPLASHES = 1
-VERSION = 'Development Build (Alpha 0.2)'
+VERSION = 'Development Build (Early-Alpha 0.2)'
 LEVEL = None
+CONTROLS = 2
 
 #:TOOLS:
 DEV_MODE = 0

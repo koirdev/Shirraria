@@ -15,10 +15,10 @@ def InitErrorLog():
 def LevelErrorLog():
 	logging.critical("Level not founded")
 
-def OpenLogs():
+def OpenCFG():
 	programName = "notepad.exe"
-	fileName = "logs.txt"
-	subprocess.Popen([programName, fileName])
+	fileName = "config.py"
+	subprocess.Popen([programName,fileName])
 
 
 

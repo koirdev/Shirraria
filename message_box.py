@@ -9,7 +9,7 @@ from PyQt5.QtWidgets import QMessageBox, QApplication, QPushButton
 
 if WARNING_MESSAGE == 1:
 	MessageStart = 0
-	pyautogui.alert("WARNING: Do not distribute build!")
+	pyautogui.alert("WARNING: This build is unstable!")
 	#pyautogui.alert("making with love!")
 
 
@@ -31,7 +31,6 @@ def WindowModeError():
 	msg.setText("Window mode is wrong!")
 	msg.setWindowTitle("ERROR")
 	msg.show()
-	WinModeErrorLog()
 	running = False
 	pygame.quit()
 	app.exec()
@@ -57,3 +56,12 @@ def InitError():
 	InitErrorLog()
 	app.exec()	
 	
+def FileCorruptionErrorMSG():
+	app = QApplication([])
+	msg = QMessageBox()
+	msg.setIcon(QMessageBox.Critical)
+	msg.setText("File corruption error")
+	msg.setWindowTitle("Loading Error")
+	msg.show()
+	InitErrorLog()
+	app.exec()

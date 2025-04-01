@@ -4,11 +4,10 @@ from config import *
 
 pygame.init()
 
-
 # Fonts
-font = pygame.font.Font('assets/fonts/funny_cute.ttf', 25)
-pause_tips_font = pygame.font.Font('assets/fonts/funny_cute.ttf', 25)
-pause_font = pygame.font.Font('assets/fonts/funny_cute.ttf', 55)
+font = pygame.font.Font('assets/fonts/42dotSans-Bold.ttf', 27)
+pause_tips_font = pygame.font.Font('assets/fonts/42dotSans-Bold.ttf', 25)
+pause_font = pygame.font.Font('assets/fonts/42dotSans-Bold.ttf', 55)
 if SPLASHES == 1:
     splash_text = pygame.font.Font('assets/fonts/Nepoboy-MVMaB.otf', 25)
 credits_font = pygame.font.Font('assets/fonts/MotleyForcesRegular-w1rZ3.ttf', 30)
@@ -21,13 +20,13 @@ if SPLASHES == 1:
 
 build_info_text = font.render(VERSION,False,(252, 250, 250))
 level_select_title_text = level_select_title_font.render("Level Select",False,(252,250,250))
-if DISTRIBUTE_TEXT == 1:
-    distribute_text = font.render("DO NOT DISTRIBUTE",False,(252, 250, 250))
-help_text = font.render("'Q' - quit '7' - screenshot 'F1' - Volume off 'F2' - Volume on ",False,(252, 250, 250))
+if WARNING_TEXT == 1:
+    warning_text = font.render("This build is unstable!",False,(252, 250, 250))
+help_text = font.render("Available on GitHub",False,(252, 250, 250))
 boosty_text = font.render("Boosty:",False,(252,250,250))
 youtube_text = font.render("YouTube:",False,(252,250,250))
 github_text = font.render("GitHub:",False,(252,250,250))
-gamejolt_text = font.render("GameJolt:",False,(252,250,250))
+gamejolt_text = font.render("Game Jolt:",False,(252,250,250))
 pause_title_text = pause_font.render("Pause", False, (252,250,250))
 pause_tips_text1 = pause_tips_font.render("Press P to contiune", False, (252,250,250))
 pause_tips_text2 = pause_tips_font.render("Press BACKSPACE to return to the main menu", False, (252,250,250))
@@ -36,13 +35,13 @@ pause_not_founded = pause_tips_font.render("Level not founded", False, (252,250,
 
 # Debug Text
 if DEBUG_MODE == 1:
-    if FULLSCREEN == 1:
+    if WINDOW_MODE == 2: #fullshit mode
         fullscreen_text = font.render("FULLSCREEN_MODE", False,(252,250,250))
-    if RESIZABLE_WINDOW == 1:
+    if WINDOW_MODE == 1: # res shit
         resizable_text = font.render("RESIZABLE_MODE", False,(252,250,250))
-    if HARDWARE_RENDER == 1:
+    if WINDOW_MODE == 3: # hardware win
         hardware_render_text = font.render("HARDWARE_RENDER_MODE", False,(252,250,250)) 
-    if DEFAULT_WINDOW == 1:
+    if WINDOW_MODE == 0: # def win
         default_window_text = font.render("DEFAULT_WINDOW_MODE", False,(252,250,250))
 
 # Credits Info
@@ -75,7 +74,7 @@ door1 = pygame.image.load('assets/images/skull_door.png')
 
 # Resizing images
 shirLogo = pygame.transform.scale(shirLogo, (430, 170))
-bg = pygame.transform.scale(bg, (1500, 750))
+bg = pygame.transform.scale(bg, (WIDTH, HEIGHT))
 boosty_logo = pygame.transform.scale(boosty_logo, (100, 100))
 youtube_logo = pygame.transform.scale(youtube_logo, (125, 150))
 github_logo = pygame.transform.scale(github_logo, (100, 100))

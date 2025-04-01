@@ -11,20 +11,29 @@ if(game_init[1]>0):
     InitError()
 
 # Window options
-if FULLSCREEN == 1:
+if WINDOW_MODE == 2: # fullscreen
     window = pygame.display.set_mode((WIDTH,HEIGHT),pygame.FULLSCREEN + pygame.SCALED)
 else:
 
-    if DEFAULT_WINDOW == 1:
+    if WINDOW_MODE == 0: # default window
+        WIDTH = 1600
+        HEIGHT = 900
         window = pygame.display.set_mode((WIDTH, HEIGHT))
     else:
-        if HARDWARE_RENDER == 1:
-            window = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN + pygame.HWSURFACE + pygame.SCALED)
-        else:
-            WindowModeError()
-            exit()
 
-CheckWindowMode()
+        if WINDOW_MODE == 1:
+            WIDTH = 1600
+            HEIGHT = 900
+            window = pygame.display.set_mode((WIDTH, HEIGHT), pygame.RESIZABLE)
+
+        else:
+            if WINDOW_MODE == 3: # hardware render
+                window = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN + pygame.HWSURFACE + pygame.SCALED)
+            else:
+                WindowModeError()
+                exit()
+                sys.exit()
+
 
 
 # Window title and icon
@@ -35,7 +44,7 @@ clock = pygame.time.Clock()
 
 # Menu Sections
 if DEBUG_MODE == 1:
-    items = ['Level 1', 'Level 2','Cutscene 1','Pause Menu','Quit from game']
+    items = ['Level 1', 'Level 2','Cutscene 1','Pause Menu','Config File','Quit from game']
 else:
     items = ['Play','Settings','Credits','Controls','Quit from game']
 
@@ -67,6 +76,8 @@ def MainMenu():
                     running = False
                     pygame.quit()
                     exit()
+                    sys.exit()
+
 
             # Menu Controls
                 elif e.type == pygame.KEYDOWN:
@@ -82,6 +93,7 @@ def MainMenu():
                         if items[selected_section] == 'Level 1': running = False, Level_1()
                         if items[selected_section] == 'Play': running = False, Level_1()
                         if items[selected_section] == 'Pause Menu': running = False, PauseMenu()
+                        if items[selected_section] == 'Config File': OpenCFG()
 
                     selected_section = selected_section % len(items)
 
@@ -91,14 +103,15 @@ def MainMenu():
                     running = False
                     pygame.quit()
                     exit()
+                    sys.exit()
 
         # Render images
-            window.blit(bg,(-200, -0))
-            window.blit(shirLogo,(822, -3))
+            window.blit(bg,(0, -0))
+            window.blit(shirLogo,(WIDTH // 1.4,HEIGHT // 65))
             window.blit(build_info_text, (0,30))
             window.blit(build_info_text, (0,30))
-            if DISTRIBUTE_TEXT == 1:
-                window.blit(distribute_text, (0,0))
+            if WARNING_TEXT == 1:
+                window.blit(warning_text, (0,0))
             window.blit(help_text, (0,60))
             window.blit(boosty_text, (0,590))
             window.blit(boosty_logo, (0,620))
@@ -125,22 +138,22 @@ def MainMenu():
                     menu_text = menu_font.render(items[i],0, CYAN)
                 else:
                     menu_text = menu_font.render(items[i],0, DARK_CYAN)
-                menu_text_rect = menu_text.get_rect(center = (WIDTH // 1.25, 250+ 50 * i))
+                menu_text_rect = menu_text.get_rect(center = (WIDTH // 1.21, 250+ 50 * i))
                 window.blit(menu_text, menu_text_rect)
 
         # Splashes
             if SPLASHES == 1:    
-                window.blit(splash_text, (450,0)) 
+                window.blit(splash_text, (WIDTH // 2.7,HEIGHT // 170)) 
 
         # Debug Func
             if DEBUG_MODE == 1:
-                if FULLSCREEN == 1:
+                if WINDOW_MODE == 2:
                     window.blit(fullscreen_text,(0,90))
-                if RESIZABLE_WINDOW == 1:
+                if WINDOW_MODE == 1:
                     window.blit(resizable_text, (0,90))
-                if HARDWARE_RENDER == 1:
+                if WINDOW_MODE == 3:
                     window.blit(hardware_render_text, (0,90))
-                if DEFAULT_WINDOW == 1:
+                if WINDOW_MODE == 0:
                     window.blit(default_window_text, (0,90))
 
 
@@ -170,6 +183,7 @@ def Level_1():
                 running = False
                 pygame.quit()
                 exit()
+                sys.exit()
 
         # 'Q' Key to quit
             if e.type == pygame.KEYUP:
@@ -177,6 +191,7 @@ def Level_1():
                     running = False
                     pygame.quit()
                     exit()
+                    sys.exit()
                     
         # 'P' Key to pause
             if e.type == pygame.KEYUP:
@@ -234,6 +249,7 @@ def PauseMenu():
                 running = False
                 pygame.quit()
                 exit()
+                sys.exit()
 
         # 'P' Key to contiune
             if e.type == pygame.KEYUP:
