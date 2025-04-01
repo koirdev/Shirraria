@@ -44,7 +44,7 @@ clock = pygame.time.Clock()
 
 # Menu Sections
 if DEBUG_MODE == 1:
-    items = ['Level 1', 'Level 2','Cutscene 1','Pause Menu','Config File','Quit from game']
+    items = ['Level 1', 'Level 2','Cutscene 1','Pause Menu','Quit from game']
 else:
     items = ['Play','Settings','Credits','Controls','Quit from game']
 
@@ -93,7 +93,6 @@ def MainMenu():
                         if items[selected_section] == 'Level 1': running = False, Level_1()
                         if items[selected_section] == 'Play': running = False, Level_1()
                         if items[selected_section] == 'Pause Menu': running = False, PauseMenu()
-                        if items[selected_section] == 'Config File': OpenCFG()
 
                     selected_section = selected_section % len(items)
 
