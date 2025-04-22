@@ -111,8 +111,9 @@ Released under [***MIT*** *License*](LICENSE)
 [Go to '*dev*' branch](https://github.com/koirdev/Shirraria/tree/dev)
 
 
-
 ## (**The game is not finished because I am porting it to pygame**)
+
+To be honest I'm tired of working on this project (the game is in development since 2022)
 
 ### ***Thank you for your attention!***
 ##### *Written with love*
