@@ -41,7 +41,7 @@ MOTVER - Tester
 
  ```git clone https://github.com/koirdev/Shirraria```
 
-# Compile:
+# Compilation:
 
 ### To get started, check out the PyInstaller library
 
