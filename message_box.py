@@ -8,8 +8,7 @@ from PyQt5.QtWidgets import QMessageBox, QApplication, QPushButton
 
 
 if WARNING_MESSAGE == 1:
-	MessageStart = 0
-	pyautogui.alert("WARNING: Do not distribute build!")
+	pyautogui.alert("WARNING: This build is unstable!")
 	#pyautogui.alert("making with love!")
 
 
