@@ -3,27 +3,27 @@
 *An open source game written using Python and the Pygame library* 
 
 # Credits:
-koirdev - Programmer, Artist
+***koirdev*** - _Programmer, Artist_
 
-VENUX - Tester
+***VENUX*** - _Tester_
 
-James BoT - Tester
+***James BoT*** - _Tester_
 
-MOTVER - Tester
+***MOTVER*** - _Tester_
 
 # Controls
 
-- Take a screenshot - '7' (saves in 'screenshots/scrsht1.png')
-- Credits Menu - 'C'
-- Quit from game - 'Q'
-- Change volume - 'F1' - off  'F2' - on
-- Back to the Main Menu - 'Backspace'
+- Take a screenshot - '***7***' (_saves in 'screenshots/scrsht1.png_)
+- Credits Menu - '***C***'
+- Quit from game - '***Q***'
+- Change volume - '***F1***' - _off_,      '***F2***' - _on_
+- Back to the Main Menu - '***Backspace***'
 
 # Player controls
 
-- Go left - 'Left key'
-- Go right - 'Right key'
-- Run - 'Left shift'
+- Go left - '***Left key***'
+- Go right - '***Right key***'
+- Run - '***Left shift***'
 
 # Libraries for running the game:
 
