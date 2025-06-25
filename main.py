@@ -1,9 +1,9 @@
 from message_box import *
 from config import * 
-from screenshot import screen_shot
-from file_loader import *
-from check_window_mode import *
-import pygame
+from sound_loader import *
+from image_loader import *
+from text_loader import *
+import pygame, sys
 
 # Checking init error
 game_init = pygame.init()
@@ -11,21 +11,34 @@ if(game_init[1]>0):
     InitError()
 
 # Window options
-if FULLSCREEN == 1:
+if WINDOW_MODE == 2: # fullscreen
     window = pygame.display.set_mode((WIDTH,HEIGHT),pygame.FULLSCREEN + pygame.SCALED)
 else:
 
-    if DEFAULT_WINDOW == 1:
+    if WINDOW_MODE == 0: # default window
+        WIDTH = 1600
+        HEIGHT = 900
         window = pygame.display.set_mode((WIDTH, HEIGHT))
     else:
-        if HARDWARE_RENDER == 1:
-            window = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN + pygame.HWSURFACE + pygame.SCALED)
+
+        if WINDOW_MODE == 1: # resizable window
+            WIDTH = 1600
+            HEIGHT = 900
+            window = pygame.display.set_mode((WIDTH, HEIGHT), pygame.RESIZABLE)
+
         else:
-            WindowModeError()
-            exit()
+            if WINDOW_MODE == 3: # hardware render
+                window = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN + pygame.HWSURFACE + pygame.SCALED)
+            else:
+                WindowModeError()
+                sys.exit()
 
-CheckWindowMode()
-
+if CONTROLS == 2:
+    pygame.joystick.init()
+    joystick = pygame.joystick.Joystick(0)
+    joystick.init()
+    if DEBUG_MODE == 1:
+        print(f"Initialized gamepad: {joystick.get_name()}")
 
 # Window title and icon
 pygame.display.set_caption("Shirraria")
@@ -35,7 +48,7 @@ clock = pygame.time.Clock()
 
 # Menu Sections
 if DEBUG_MODE == 1:
-    items = ['Level 1', 'Level 2','Pause Menu','Quit from game']
+    items = ['Level 1', 'Level 2','Cutscene 1','Pause Menu','Quit from game']
 else:
     items = ['Play','Settings','Credits','Controls','Quit from game']
 
@@ -66,7 +79,8 @@ def MainMenu():
                 if e.type == pygame.QUIT:
                     running = False
                     pygame.quit()
-                    exit()
+                    sys.exit()
+
 
             # Menu Controls
                 elif e.type == pygame.KEYDOWN:
@@ -76,7 +90,7 @@ def MainMenu():
                         selected_section += 1
                     elif e.key in [pygame.K_RETURN, pygame.K_SPACE]:
              # Menu tabs
-                        if items[selected_section] == 'Quit from game': running = False, pygame.quit(), exit()
+                        if items[selected_section] == 'Quit from game': running = False, pygame.quit(), sys.exit()
                         if items[selected_section] == 'Credits': credits_sign()
                         if items[selected_section] == 'Level select': running = False, Level_Select()
                         if items[selected_section] == 'Level 1': running = False, Level_1()
@@ -90,17 +104,16 @@ def MainMenu():
                 if e.key == pygame.K_q:
                     running = False
                     pygame.quit()
-                    exit()
+                    sys.exit()
 
         # Render images
-            window.blit(bg,(-200, -0))
-            window.blit(shirLogo,(822, -3))
+            window.blit(bg,(0, -0))
+            window.blit(shirLogo,(WIDTH // 1.4,HEIGHT // 65))
             window.blit(build_info_text, (0,30))
-            if DISTRIBUTE_TEXT == 1:
-                window.blit(distribute_text, (0,0))
+            window.blit(build_info_text, (0,30))
+            if WARNING_TEXT == 1:
+                window.blit(warning_text, (0,0))
             window.blit(help_text, (0,60))
-            window.blit(boosty_text, (0,590))
-            window.blit(boosty_logo, (0,620))
             window.blit(youtube_logo, (120,590))
             window.blit(github_logo, (265,620))
             window.blit(gamejolt_logo, (385,620))
@@ -124,22 +137,22 @@ def MainMenu():
                     menu_text = menu_font.render(items[i],0, CYAN)
                 else:
                     menu_text = menu_font.render(items[i],0, DARK_CYAN)
-                menu_text_rect = menu_text.get_rect(center = (WIDTH // 1.25, 250+ 50 * i))
+                menu_text_rect = menu_text.get_rect(center = (WIDTH // 1.21, 250+ 50 * i))
                 window.blit(menu_text, menu_text_rect)
 
         # Splashes
             if SPLASHES == 1:    
-                window.blit(splash_text, (450,0)) 
+                window.blit(splash_text, (WIDTH // 2.7, HEIGHT // 170)) 
 
         # Debug Func
             if DEBUG_MODE == 1:
-                if FULLSCREEN == 1:
+                if WINDOW_MODE == 2:
                     window.blit(fullscreen_text,(0,90))
-                if RESIZABLE_WINDOW == 1:
+                if WINDOW_MODE == 1:
                     window.blit(resizable_text, (0,90))
-                if HARDWARE_RENDER == 1:
+                if WINDOW_MODE == 3:
                     window.blit(hardware_render_text, (0,90))
-                if DEFAULT_WINDOW == 1:
+                if WINDOW_MODE == 0:
                     window.blit(default_window_text, (0,90))
 
 
@@ -151,13 +164,6 @@ def MainMenu():
             if DEBUG_MODE == 1:
                 print(clock.get_fps())
 
-            # Making Screenshot
-            if e.type == pygame.KEYUP:
-                if e.key == pygame.K_7:
-                    print("Saving...")
-                    screen_shot()
-                    print("Saved in screenshots/scrsht1.png")
-
 
 def Level_1():
     global running, character_y, character_x, character_speed, LEVEL
@@ -168,43 +174,44 @@ def Level_1():
             if e.type == pygame.QUIT:
                 running = False
                 pygame.quit()
-                exit()
+                sys.exit()
 
         # 'Q' Key to quit
             if e.type == pygame.KEYUP:
                 if e.key == pygame.K_q:
                     running = False
                     pygame.quit()
-                    exit()
-        # 'P' Key to pause
-            if e.type == pygame.KEYUP:
-                if e.key == pygame.K_p:
-                    PauseMenu()
-                    running = False
+                    sys.exit()
 
-                    
         # Player Controls
-        keys = pygame.key.get_pressed()
-            
-        if keys[pygame.K_LSHIFT]:
-            character_speed = 10
-        else:
-            character_speed = 5
+        # Keyboard controls
+        if CONTROLS == 1:
 
-        if keys[pygame.K_LEFT]:
-            character_x -= character_speed
+            keys = pygame.key.get_pressed()
+                
+            if keys[pygame.K_LSHIFT]:
+                character_speed = 10
+            else:
+                character_speed = 5
+                
+            if keys[pygame.K_LEFT]:
+                character_x -= character_speed
 
-        if keys[pygame.K_RIGHT]:
-            character_x += character_speed
-       
-        # Volume off
-            if e.type == pygame.KEYUP:
-                    if e.key == pygame.K_F1:
-                        pygame.mixer.music.set_volume(0)
-        # Volume on
-            if e.type == pygame.KEYUP:
-                    if e.key == pygame.K_F2:
-                        pygame.mixer.music.set_volume(1)
+            if keys[pygame.K_RIGHT]:
+                character_x += character_speed
+
+        # Gamepad controls
+        if CONTROLS == 2:
+
+            # Player movement
+            left_stick_x = joystick.get_axis(0)
+
+            character_x += left_stick_x * character_speed
+
+            if joystick.get_button(0):
+                character_speed = 10
+            else:
+                character_speed = 5
 
         # Render images           
         window.fill((82, 212, 255))
@@ -223,7 +230,7 @@ def Level_1():
 
 
 def PauseMenu():
-    global running, LEVEL
+    global running, LEVEL, CONTROLS
     while running:
        
        # Quit Event
@@ -231,20 +238,8 @@ def PauseMenu():
             if e.type == pygame.QUIT:
                 running = False
                 pygame.quit()
-                exit()
+                sys.exit()
 
-        # 'P' Key to contiune
-            if e.type == pygame.KEYUP:
-                if e.key == pygame.K_p:
-                    Level_1()
-                    running = False
-
-         # 'Backspace' Key back to the main menu
-            if e.type == pygame.KEYUP:
-                if e.key == pygame.K_BACKSPACE:
-                    switch_scene(MainMenu)
-                    running = False                   
-                    
         # Render images
         window.fill((0, 0, 0))
         window.blit(pause_title_text,(550,250))
