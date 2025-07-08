@@ -24,7 +24,7 @@
 - Go right - '***Right key***'
 - Run - '***Left shift***'
 
-# For XBOX 360 gamepad control (Not completely)
+# For controlling the XBOX 360 gamepad (Not completely)
 
 - Character movement - '***D-PAD***' (Left stick)
 - Run - '***X***' button
