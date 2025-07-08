@@ -2,7 +2,7 @@
 
 *A non-commercial, open source game written using Python and the Pygame library* 
 
-# Credits:
+# Credits
 ***koirdev*** - _Programmer, Artist_
 
 ***VENUX*** - _Tester_
