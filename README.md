@@ -15,6 +15,7 @@
 
 - Quit from game - '***Q***'
 - Back to the Main Menu - '***Backspace***'
+- Switch between sections in the Main Menu - '***ARROW UP***' and '***ARROW DOWN***'
 - Select section - '***ENTER***' or '***SPACE***'
 
 # Player controls
@@ -27,7 +28,6 @@
 
 - Character movement - '***D-PAD***' (Left stick)
 - Run - '***X***' button
-
 
 # Libraries for running the game:
 
