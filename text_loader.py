@@ -53,8 +53,6 @@ credits_motver = credits_font.render("MOTVER - Tester",False,(252,250,250))
 
 
 # Checking the modes
-if DEV_MODE == 1:
-  build_info_text = font.render("DEV_MODE",False,(252,250,250))
 if TEST_MODE == 1:
   build_info_text = font.render("TESTER_MODE - "+"ver. "+VERSION,False,(252,250,250))
 if DEBUG_MODE == 1:
