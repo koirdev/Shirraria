@@ -2,7 +2,6 @@ import pyautogui
 import pygame
 import sys
 from config import WARNING_MESSAGE
-from debug import *
 from PyQt5.QtWidgets import QMessageBox, QApplication, QPushButton
 
 
