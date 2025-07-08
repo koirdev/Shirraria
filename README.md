@@ -23,7 +23,7 @@
 - Go right - '***Right key***'
 - Run - '***Left shift***'
 
-# For XBOX 360 gamepad control
+# For XBOX 360 gamepad control (Not completely)
 
 - Character movement - '***D-PAD***' (Left stick)
 - Run - '***X***' button
@@ -79,7 +79,7 @@ After that copy the 'assets' folder to the 'win_build' folder and run the "EXE" 
 - ```CURSOR``` - Custom cursor (in development)
 - ```TEST_MODE``` - Mode for testers
 - ```DEBUG_MODE``` - Debug Mode
-- ```SPLASHES``` - Random splashes in title menu
+- ```SPLASHES``` - Turn random splashes on and off in the main menu
 - ```VERSION``` - Game version
 - ```WARNING_TEXT``` - Show text "This build is unstable!"
 
