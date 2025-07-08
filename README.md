@@ -1,6 +1,6 @@
 # Shirraria
 
-*An open source game written using Python and the Pygame library* 
+*A non-commercial, open source game written using Python and the Pygame library* 
 
 # Credits:
 ***koirdev*** - _Programmer, Artist_
@@ -13,11 +13,9 @@
 
 # Controls
 
-- Take a screenshot - '***7***' (_saves in 'screenshots/scrsht1.png_)
-- Credits Menu - '***C***'
 - Quit from game - '***Q***'
-- Change volume - '***F1***' - _off_,      '***F2***' - _on_
 - Back to the Main Menu - '***Backspace***'
+- Select section - '***ENTER***' or '***SPACE***'
 
 # Player controls
 
@@ -25,13 +23,18 @@
 - Go right - '***Right key***'
 - Run - '***Left shift***'
 
+# For XBOX 360 gamepad control
+
+- Character movement - '***D-PAD***' (Left stick)
+- Run - '***X***' button
+
+
 # Libraries for running the game:
 
 - Pygame (Game library)
 - PyAutoGUI (Message boxes)
 - PyInstaller (To compile the game)
 - PyQt5 (Message boxes)
-- pyscreenshot (Screenshots)
 
 # Installation:
 
@@ -49,35 +52,33 @@ https://pyinstaller.org/en/stable/
 
 ## Compiling for ***Windows***:
 
-1. Download PyInstaller library using command in CMD:
+1. Download PyInstaller library using command in "CMD":
 
     ```pip install pyinstaller```
 
-2. Open CMD in the game folder, and enter this command:
+2. Open "CMD" in the game folder, and enter this command:
 
-      ```pyinstaller --noconsole -F --distpath exe -n shirraria main.py```
+      ```pyinstaller --noconsole -F --distpath win_build -n shirraria main.py``` - (*Normal compilation*)
+   
+      ```pyinstaller -F --distpath win_build -n shirraria main.py``` - (*For debugging* - ***Don't forget to change the*** "```DEBUG MODE```" ***parameter to "1" in the game's configuration file before compiling***)
 
-After that copy the 'assets' folder to the 'exe' folder and run the EXE file
+If you want to compile the game, you can also use "CMD" files for normal compilation - "_compile_to_exe.cmd_", for debug compilation - "_compile_to_exe_WITH_CONSOLE.cmd_" If you want to remove compiled files then use - "_remove_compiled_files.cmd_"
+
+After that copy the 'assets' folder to the 'win_build' folder and run the "EXE" file
 
 ***(WARNING: The game may not work correctly)***
 
 # Shirraria Configuration:
 
 - ```WIDTH, HEIGHT``` - Screen Resolution
-- ```FPS``` - Number of frames *(To display the FPS value on the console, change the '```DEBUG_MODE```' value to '1')*
-- ```HARDWARE_RENDER``` - Hardware rendering
-- ```FULLSCREEN``` - Game in full screen
-- ```DEFAULT_WINDOW``` - Regular window
-- ```RESIZABLE_WINDOW``` - Can resize the window
+- ```FPS``` - Count of frames *(To display the FPS value on the console, change the '```DEBUG_MODE```' value to '1')*
+- ```WINDOW_MODE``` - Changes the parameters of the game window  *(0 - Default, 1 - Resizable, 2 - Fullscreen, 3 - Hardware render)*
 - ```WARNING_MESSAGE``` - Showing message box "WARNING: This build is unstable"
 - ```MUSIC``` - Off and on music
 - ```SFX``` - Off and on sound effects (in development)
 - ```CURSOR``` - Custom cursor (in development)
-- ```LANG``` - Game languague (in development)
-- ```DEV_MODE``` - Developer Mode
 - ```TEST_MODE``` - Mode for testers
 - ```DEBUG_MODE``` - Debug Mode
-- ```SCREENSHOT``` - Screenshot Function
 - ```SPLASHES``` - Random splashes in title menu
 - ```VERSION``` - Game version
 - ```WARNING_TEXT``` - Show text "This build is unstable!"
@@ -108,13 +109,10 @@ Released under [***MIT*** *License*](LICENSE)
 
 [Go to '*backup*' branch](https://github.com/koirdev/Shirraria/tree/backup)
 
-[Go to '*dev*' branch](https://github.com/koirdev/Shirraria/tree/dev)
+[Go to '*dev*' branch (Development builds)](https://github.com/koirdev/Shirraria/tree/dev)
 
 
 ## (**The game is not finished because I am porting it to pygame**)
-
-To be honest I'm tired of working on this project (the game is in development since 2022)
-
 ### ***Thank you for your attention!***
 ##### *Written with love*
 
