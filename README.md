@@ -72,7 +72,7 @@ After that copy the 'assets' folder to the 'win_build' folder and run the "EXE" 
 
 - ```WIDTH, HEIGHT``` - Screen Resolution
 - ```FPS``` - Count of frames *(To display the FPS value on the console, change the '```DEBUG_MODE```' value to '1')*
-- ```WINDOW_MODE``` - Changes the parameters of the game window  *(0 - Default, 1 - Resizable, 2 - Fullscreen, 3 - Hardware render)*
+- ```WINDOW_MODE``` - Changes the parameters of the game window  *('0' - Default, '1' - Resizable, '2' - Fullscreen, '3' - Hardware render)*
 - ```WARNING_MESSAGE``` - Showing message box "WARNING: This build is unstable"
 - ```MUSIC``` - Off and on music
 - ```SFX``` - Off and on sound effects (in development)
@@ -82,6 +82,7 @@ After that copy the 'assets' folder to the 'win_build' folder and run the "EXE" 
 - ```SPLASHES``` - Turn random splashes on and off in the main menu
 - ```VERSION``` - Game version
 - ```WARNING_TEXT``` - Show text "This build is unstable!"
+- ```CONTROLS``` - Control device (Keyboard - '1', XBOX 360 gamepad - '2') , 
 
 
 <!--# All links:
