@@ -11,6 +11,12 @@
 
 ***MOTVER*** - _Tester_
 
+# Sound effects
+
+Sounds for the game are taken from the site: [**freesound.org**](https://freesound.org)
+
+# Music
+**8 Bit Surf by David Renda**
 # Controls
 
 - Quit from game - '***Q***'
