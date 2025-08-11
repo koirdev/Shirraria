@@ -2,7 +2,6 @@ import pyautogui
 import pygame
 import sys
 from config import WARNING_MESSAGE
-from logs import *
 from PyQt5.QtWidgets import QMessageBox, QApplication, QPushButton
 
 
@@ -46,14 +45,14 @@ def LevelNotFounded():
 	running = False
 	app.exec()
 
-def InitError():
+def MainCoreInitError():
 	app = QApplication([])
 	msg = QMessageBox()
 	msg.setIcon(QMessageBox.Critical)
 	msg.setText("Game initialization failed")
-	msg.setWindowTitle("Init Error")
+	msg.setWindowTitle("Main core initialization error")
 	msg.show()
-	InitErrorLog()
+	MainCoreInitErrorLog()
 	app.exec()	
 	
 def FileCorruptionErrorMSG():
