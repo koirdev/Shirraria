@@ -79,8 +79,7 @@ After that copy the 'assets' folder to the 'win_build' folder and run the "EXE" 
 - ```WINDOW_MODE``` - Changes the parameters of the game window  *('0' - Default, '1' - Resizable, '2' - Fullscreen, '3' - Hardware render)*
 - ```WARNING_MESSAGE``` - Showing message box "WARNING: This build is unstable"
 - ```MUSIC``` - Off and on music
-- ```SFX``` - Off and on sound effects (in development)
-- ```CURSOR``` - Custom cursor (in development)
+- ```SFX``` - Off and on sound effects
 - ```TEST_MODE``` - Mode for testers
 - ```DEBUG_MODE``` - Debug Mode
 - ```SPLASHES``` - Turn random splashes on and off in the main menu
