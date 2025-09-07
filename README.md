@@ -18,6 +18,7 @@
 # Special Thanks
 
 - [***mephyfan180 (Chaos Coffee Hound)***](https://github.com/koirdev/Shirraria/blob/main/LINKS.md) - _For mental support_
+- ***Diego (zeref453)*** - _For interest in the project_
 
 # Sound effects
 
@@ -81,7 +82,9 @@ If you want to compile the game, you can also use "CMD" files for normal compila
 
 ***(WARNING: The game may not work correctly)***
 
-## Compiling for ***Linux*** (Tested on a VIRTUAL MACHINE on Ubuntu version 25.04. NOT tested on real hardware!):
+## Compiling for ***Linux***
+
+***(Tested on a VIRTUAL MACHINE on Ubuntu version 25.04. NOT tested on real hardware!)***
 
 1. Install PyInstaller by opening the terminal:
 
