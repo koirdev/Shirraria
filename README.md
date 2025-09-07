@@ -1,15 +1,13 @@
-# Shirraria
+# Shirraria (Cancelled, the game will stop receiving updates)
 
 *A non-commercial, open source game written using Python and the Pygame library* 
 
 # Credits
-***koirdev*** - _Programmer, Artist_
+- ***koirdev*** - _Programmer, Artist_
 
-***VENUX*** - _Tester_
+# Special Thanks
 
-***James BoT*** - _Tester_
-
-***MOTVER*** - _Tester_
+- ***mephyfan180 (Chaos Coffee Hound)*** - _For mental help_
 
 # Sound effects
 
@@ -32,7 +30,7 @@ Sounds for the game are taken from the site: [**freesound.org**](https://freesou
 
 # For controlling the XBOX 360 gamepad (Not completely)
 
-- Character movement - '***D-PAD***' (Left stick)
+- Player movement - '***D-PAD***' (Left stick)
 - Run - '***X***' button
 
 # Libraries for running the game:
@@ -111,6 +109,8 @@ Released under [***MIT*** *License*](LICENSE)
 [Open Sans License](assets/fonts/open-sans-license.txt)
 
 [42dotSans License](assets/fonts/42dotSans-license.txt)
+
+[ArchivoBlack License](https://github.com/Omnibus-Type/ArchivoBlack/blob/master/LICENSE.md)
 
 # Branches
 
