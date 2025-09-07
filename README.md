@@ -46,7 +46,6 @@ Sounds for the game are taken from the site: [**freesound.org**](https://freesou
 # Libraries for running the game:
 
 - Pygame (Game library)
-- PyAutoGUI (Message boxes)
 - PyInstaller (To compile the game)
 - PyQt5 (Message boxes)
 
