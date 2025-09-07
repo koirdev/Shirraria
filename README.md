@@ -64,7 +64,7 @@ Sounds for the game are taken from the site: [**freesound.org**](https://freesou
 
 https://pyinstaller.org/en/stable/
 
-## Compiling for ***Windows***:
+## Compiling for ***Windows***
 
 1. Download PyInstaller library using command in "CMD":
 
