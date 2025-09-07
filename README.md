@@ -68,9 +68,25 @@ https://pyinstaller.org/en/stable/
 
 If you want to compile the game, you can also use "CMD" files for normal compilation - "_compile_to_exe.cmd_", for debug compilation - "_compile_to_exe_WITH_CONSOLE.cmd_" If you want to remove compiled files then use - "_remove_compiled_files.cmd_"
 
-After that copy the 'assets' folder to the 'win_build' folder and run the "EXE" file
+***After that copy the 'assets' folder to the 'win_build' folder and run the "EXE" file***
 
 ***(WARNING: The game may not work correctly)***
+
+## Compiling for ***Linux*** (Tested on a VIRTUAL MACHINE on Ubuntu version 25.04. NOT tested on real hardware!):
+
+1. Install PyInstaller by opening the terminal:
+
+    ```pip3 install -U pyinstaller```
+   
+   If during installation the error "***externally-managed-environment***" appears, then use the command:
+    
+   ```pip3 install pyinstaller --break-system-packages```
+
+2. After that, go to the directory where the game is located and enter the command:
+
+   ```python3 -m PyInstaller --noconsole --onefile --distpath linux_build -n shirraria main.py```
+   
+ ***Next, copy the "assets" folder and paste it into the 'linux_build' folder and run the file called 'shirraria'***
 
 # Shirraria Configuration:
 
