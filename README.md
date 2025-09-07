@@ -7,7 +7,7 @@
 
 # Special Thanks
 
-- ***mephyfan180 (Chaos Coffee Hound)*** - _For mental help_
+- [***mephyfan180 (Chaos Coffee Hound)***](https://github.com/koirdev/Shirraria/blob/main/LINKS.md) - _For mental help_
 
 # Sound effects
 
