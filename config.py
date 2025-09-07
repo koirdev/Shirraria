@@ -7,17 +7,16 @@ HEIGHT = 1080		#1080 - for test
 
 #:SETTINGS:
 FPS = 60
-WINDOW_MODE = 0 # 0 - default, 1 - resizable, 2 - fullscreen, 3 - hardware render
+WINDOW_MODE = 2 # 0 - default, 1 - resizable, 2 - fullscreen, 3 - hardware render
 WARNING_MESSAGE = 0
-MUSIC = 0
-WARNING_TEXT = 0
-SFX = None
-CURSOR = None
-LANG = None
+MUSIC = 1
+WARNING_TEXT = 1
+SFX = 1
 SPLASHES = 1
-VERSION = 'Early Alpha 0.2_RELEASE'
+VERSION = 'Early Alpha 0.3 - Last update'
 CONTROLS = 1
 
 #:TOOLS:
 TEST_MODE = 0
-DEBUG_MODE = 0
+DEBUG_MODE = 1
+

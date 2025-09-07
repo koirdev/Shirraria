@@ -1,14 +1,17 @@
 from message_box import *
 from config import * 
 from sound_loader import *
-from image_loader import *
+from graphics_loader import *
 from text_loader import *
+from openLinks import *
 import pygame, sys
+
+print("WARNING: This game is cancelled, this build has many unfinished and buggy features! Play at your own risk! There will be no more updates")
 
 # Checking init error
 game_init = pygame.init()
 if(game_init[1]>0):
-    InitError()
+    MainCoreInitError()
 
 # Window options
 if WINDOW_MODE == 2: # fullscreen
@@ -16,8 +19,8 @@ if WINDOW_MODE == 2: # fullscreen
 else:
 
     if WINDOW_MODE == 0: # default window
-        WIDTH = 1600
-        HEIGHT = 900
+        WIDTH = 1280
+        HEIGHT = 720
         window = pygame.display.set_mode((WIDTH, HEIGHT))
     else:
 
@@ -38,7 +41,7 @@ if CONTROLS == 2:
     joystick = pygame.joystick.Joystick(0)
     joystick.init()
     if DEBUG_MODE == 1:
-        print(f"Initialized gamepad: {joystick.get_name()}")
+        print(f"Initialized gamepad(s): {joystick.get_name()}")
 
 # Window title and icon
 pygame.display.set_caption("Shirraria")
@@ -48,9 +51,9 @@ clock = pygame.time.Clock()
 
 # Menu Sections
 if DEBUG_MODE == 1:
-    items = ['Level 1', 'Level 2','Cutscene 1','Pause Menu','Quit from game']
+    items = ['Level 1', 'Credits','Open Log file','GitHub page','Quit from game']
 else:
-    items = ['Play','Settings','Credits','Controls','Quit from game']
+    items = ['Play','Settings','Credits','Quit from game']
 
 selected_section = 0
 
@@ -70,7 +73,7 @@ def switch_scene(scene):
     current_scene = scene
 
 def MainMenu():
-    global running, selected_section
+    global running, selected_section, shirLogo, CONTROLS
     running = True
     while running:
         
@@ -86,24 +89,31 @@ def MainMenu():
                 elif e.type == pygame.KEYDOWN:
                     if e.key == pygame.K_UP:
                         selected_section -= 1
+                        if SFX == 1:
+                            clickSound.play()
                     elif e.key == pygame.K_DOWN:
                         selected_section += 1
+                        if SFX == 1:
+                            clickSound.play()
                     elif e.key in [pygame.K_RETURN, pygame.K_SPACE]:
+                        if SFX == 1:
+                            whooshSound.play()
+
              # Menu tabs
                         if items[selected_section] == 'Quit from game': running = False, pygame.quit(), sys.exit()
                         if items[selected_section] == 'Credits': credits_sign()
                         if items[selected_section] == 'Level select': running = False, Level_Select()
                         if items[selected_section] == 'Level 1': running = False, Level_1()
                         if items[selected_section] == 'Play': running = False, Level_1()
-                        if items[selected_section] == 'Pause Menu': running = False, PauseMenu()
+                        if items[selected_section] == 'Open Log file': OpenLogFile()
+                        if items[selected_section] == 'GitHub page': OpenGitHubLink()
+
 
                     selected_section = selected_section % len(items)
 
        # 'Q' Key to quit
             if e.type == pygame.KEYUP:
                 if e.key == pygame.K_q:
-                    running = False
-                    pygame.quit()
                     sys.exit()
 
         # Render images
@@ -114,22 +124,15 @@ def MainMenu():
             if WARNING_TEXT == 1:
                 window.blit(warning_text, (0,0))
             window.blit(help_text, (0,60))
-            window.blit(youtube_logo, (120,590))
-            window.blit(github_logo, (265,620))
-            window.blit(gamejolt_logo, (385,620))
-            window.blit(youtube_text, (120,590))
-            window.blit(github_text, (265,590))
-            window.blit(gamejolt_text, (380,590))
 
             # Credits Func       
             def credits_sign():
-                window.blit(credits_sign_img,(300,100))
-                window.blit(credits_title,(500,130))
-                window.blit(credits_koirdev,(350,200))
-                window.blit(credits_venux,(350,300))
-                window.blit(credits_JBoT,(350,400))
-                window.blit(credits_motver,(350,500))
-                pygame.display.flip()           
+                    window.blit(credits_sign_img,(300,100))
+                    window.blit(credits_title,(500,130))
+                    window.blit(credits_koirdev,(350,200))
+                    window.blit(credits_venux,(350,300))
+                    window.blit(credits_JBoT,(350,400))
+                    window.blit(credits_motver,(350,500))
 
         # Render Menu
             for i in range(len(items)):
@@ -141,7 +144,7 @@ def MainMenu():
                 window.blit(menu_text, menu_text_rect)
 
         # Splashes
-            if SPLASHES == 1:    
+            if SPLASHES == 1:
                 window.blit(splash_text, (WIDTH // 2.7, HEIGHT // 170)) 
 
         # Debug Func
@@ -155,7 +158,6 @@ def MainMenu():
                 if WINDOW_MODE == 0:
                     window.blit(default_window_text, (0,90))
 
-
         # Update screen
             pygame.display.update()
             clock.tick(FPS)
@@ -165,8 +167,9 @@ def MainMenu():
                 print(clock.get_fps())
 
 
+
 def Level_1():
-    global running, character_y, character_x, character_speed, LEVEL
+    global running, character_y, character_x, character_speed
     while running:
 
        # Quit Event
@@ -182,6 +185,13 @@ def Level_1():
                     running = False
                     pygame.quit()
                     sys.exit()
+
+        # 'BACKSPACE' Key to back in menu
+            if e.type == pygame.KEYUP:
+                if e.key == pygame.K_BACKSPACE:
+                    switch_scene(MainMenu)
+                    click2Sound.play()
+                    running = False
 
         # Player Controls
         # Keyboard controls
@@ -208,6 +218,7 @@ def Level_1():
 
             character_x += left_stick_x * character_speed
 
+        # Player speed
             if joystick.get_button(0):
                 character_speed = 10
             else:
@@ -228,31 +239,6 @@ def Level_1():
         if DEBUG_MODE == 1:
             print(clock.get_fps())
 
-
-def PauseMenu():
-    global running, LEVEL, CONTROLS
-    while running:
-       
-       # Quit Event
-        for e in pygame.event.get():
-            if e.type == pygame.QUIT:
-                running = False
-                pygame.quit()
-                sys.exit()
-
-        # Render images
-        window.fill((0, 0, 0))
-        window.blit(pause_title_text,(550,250))
-        window.blit(pause_tips_text1,(500,350))
-        window.blit(pause_tips_text2,(350,400))
- 
-        # Update screen
-        pygame.display.update()
-        clock.tick(FPS)
-
-        # Show FPS on Console
-        if DEBUG_MODE == 1:
-            print(clock.get_fps())
 
 # Switch scene
 switch_scene(MainMenu)
