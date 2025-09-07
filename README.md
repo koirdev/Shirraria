@@ -2,6 +2,10 @@
 
 *A non-commercial, open source game written using Python and the Pygame library* 
 
+# Available on
+ <img width="50" height="70" src="https://github.com/koirdev/koirdev/blob/main/assets/linux-tux.png"></a>
+  <img width="50" height="70" src="https://github.com/koirdev/koirdev/blob/main/assets/windows.png"></a>
+
 # Credits
 - ***koirdev*** - _Programmer, Artist_
 
