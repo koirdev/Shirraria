@@ -1,6 +1,0 @@
-@echo Please wait
-rmdir /s /q exe
-del /f /q shirraria.spec
-rmdir /s /q build
-@echo Done
-exit
