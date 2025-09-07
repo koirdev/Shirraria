@@ -9,6 +9,6 @@
 - [**Tumblr (Mephyfan180)**](https://www.tumblr.com/downbadcaffeinelover)
 - [**Tumblr (Timid Latte Cookie)**](https://www.tumblr.com/timidlattecookie)
 - [**TikTok (Mephyfan180)**](https://www.tiktok.com/@chaoscoffeehound?_t=ZT-8zW9SdEsMKt&_r=1)
-- [**Tiktok (YourLocalSimp)**](https://www.tiktok.com/@downbadcoffeeaddict?_t=ZT-8zW9UeCe3Vf&_r=1)
+- [**TikTok (YourLocalSimp)**](https://www.tiktok.com/@downbadcoffeeaddict?_t=ZT-8zW9UeCe3Vf&_r=1)
 - [**Help her family on GoFundMe**](https://gofund.me/5b852b78)
 
