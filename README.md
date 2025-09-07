@@ -3,8 +3,14 @@
 *A non-commercial, open source game written using Python and the Pygame library* 
 
 # Available on
- <img width="50" height="70" src="https://github.com/koirdev/koirdev/blob/main/assets/linux-tux.png"></a>
-  <img width="50" height="70" src="https://github.com/koirdev/koirdev/blob/main/assets/windows.png"></a>
+<img width="50" height="70" src="https://github.com/koirdev/koirdev/blob/main/assets/windows.png"></a>
+<img width="50" height="70" src="https://github.com/koirdev/koirdev/blob/main/assets/linux-tux.png"></a>
+
+ 
+[**Compiling for Windows**](https://github.com/koirdev/shirraria?tab=readme-ov-file#compiling-for-windows)
+
+[**Compiling for Linux**](https://github.com/koirdev/shirraria?tab=readme-ov-file#compiling-for-linux-tested-on-a-virtual-machine-on-ubuntu-version-2504-not-tested-on-real-hardware)
+ 
 
 # Credits
 - ***koirdev*** - _Programmer, Artist_
