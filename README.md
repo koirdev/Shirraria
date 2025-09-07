@@ -86,7 +86,7 @@ After that copy the 'assets' folder to the 'win_build' folder and run the "EXE" 
 - ```SPLASHES``` - Turn random splashes on and off in the main menu
 - ```VERSION``` - Game version
 - ```WARNING_TEXT``` - Show text "This build is unstable!"
-- ```CONTROLS``` - Control device (Keyboard - '1', XBOX 360 gamepad - '2') , 
+- ```CONTROLS``` - Control device (Keyboard - '1', XBOX 360 gamepad - '2')
 
 
 <!--# All links:
