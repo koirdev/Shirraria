@@ -1,4 +1,3 @@
-import pyautogui
 import pygame
 import sys
 from config import WARNING_MESSAGE
@@ -7,21 +6,14 @@ from PyQt5.QtWidgets import QMessageBox, QApplication, QPushButton
 
 
 if WARNING_MESSAGE == 1:
-	MessageStart = 0
-	pyautogui.alert("WARNING: This build is unstable!")
-	#pyautogui.alert("making with love!")
+	app = QApplication([])
+	msg = QMessageBox()
+	msg.setIcon(QMessageBox.Warning)
+	msg.setText("This build is unstable!")
+	msg.setWindowTitle("Warning!")
+	msg.show()
+	app.exec()
 
-
-def JoystickModeError():
-	pygame.quit()
-	pyautogui.alert("Edit value 'JOYSTICK_MODE' to '1'")
-	exit()
-
-
-#def WindowModeError():
-#	pygame.quit()
-#	pyautogui.alert("Window mode is incorrect!")
-#	exit()
 
 def WindowModeError():
 	app = QApplication([])

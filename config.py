@@ -12,10 +12,8 @@ WARNING_MESSAGE = 0
 MUSIC = 1
 WARNING_TEXT = 1
 SFX = 1
-CURSOR = None
-LANG = None
 SPLASHES = 1
-VERSION = 'Early Alpha 0.3-DEV'
+VERSION = 'Early Alpha 0.3 - Last update'
 CONTROLS = 1
 
 #:TOOLS:

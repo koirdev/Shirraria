@@ -1,6 +1,6 @@
 import logging
 
-# Placeholder XD
+# Placeholder
 logging.basicConfig(level=logging.INFO, filename="logs.log", filemode="w")
 logging.debug("A DEBUG Message")
 logging.info("An INFO")

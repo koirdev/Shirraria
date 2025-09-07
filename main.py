@@ -3,7 +3,10 @@ from config import *
 from sound_loader import *
 from graphics_loader import *
 from text_loader import *
+from openLinks import *
 import pygame, sys
+
+print("WARNING: This game is cancelled, this build has many unfinished and buggy features! Play at your own risk! There will be no more updates")
 
 # Checking init error
 game_init = pygame.init()
@@ -16,8 +19,8 @@ if WINDOW_MODE == 2: # fullscreen
 else:
 
     if WINDOW_MODE == 0: # default window
-        WIDTH = 1600
-        HEIGHT = 900
+        WIDTH = 1280
+        HEIGHT = 720
         window = pygame.display.set_mode((WIDTH, HEIGHT))
     else:
 
@@ -48,9 +51,9 @@ clock = pygame.time.Clock()
 
 # Menu Sections
 if DEBUG_MODE == 1:
-    items = ['Level 1', 'Level 2','Cutscene 1','Restart the game','Quit from game']
+    items = ['Level 1', 'Credits','Open Log file','GitHub page','Quit from game']
 else:
-    items = ['Play','Settings','Credits','Controls','Quit from game']
+    items = ['Play','Settings','Credits','Quit from game']
 
 selected_section = 0
 
@@ -102,6 +105,8 @@ def MainMenu():
                         if items[selected_section] == 'Level select': running = False, Level_Select()
                         if items[selected_section] == 'Level 1': running = False, Level_1()
                         if items[selected_section] == 'Play': running = False, Level_1()
+                        if items[selected_section] == 'Open Log file': OpenLogFile()
+                        if items[selected_section] == 'GitHub page': OpenGitHubLink()
 
 
                     selected_section = selected_section % len(items)
@@ -119,12 +124,6 @@ def MainMenu():
             if WARNING_TEXT == 1:
                 window.blit(warning_text, (0,0))
             window.blit(help_text, (0,60))
-            window.blit(youtube_logo, (120,590))
-            window.blit(github_logo, (265,620))
-            window.blit(gamejolt_logo, (385,620))
-            window.blit(youtube_text, (120,590))
-            window.blit(github_text, (265,590))
-            window.blit(gamejolt_text, (380,590))
 
             # Credits Func       
             def credits_sign():
