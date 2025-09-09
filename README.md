@@ -1,4 +1,4 @@
-# Shirraria (Cancelled, the game will stop receiving updates)
+# Shirraria
 
 *A non-commercial, open source game written using Python and the Pygame library* 
 
