@@ -5,7 +5,7 @@
 # Available on
 <a href="https://github.com/koirdev/shirraria?tab=readme-ov-file#compiling-for-windows"><img width="50" height="70" src="https://github.com/koirdev/koirdev/blob/main/assets/windows.png"></a>
 <a href="https://github.com/koirdev/shirraria?tab=readme-ov-file#compiling-for-linux-tested-on-a-virtual-machine-on-ubuntu-version-2504-not-tested-on-real-hardware"><img width="50" height="70" src="https://github.com/koirdev/koirdev/blob/main/assets/linux-tux.png"></a>
-<a href="http://shirraria.koirdev.su/"><img width="50" height="70" src="https://github.com/koirdev/koirdev/blob/main/assets/web.png"></a>
+<a href="http://shirraria.koirdev.su"><img width="50" height="70" src="https://github.com/koirdev/koirdev/blob/main/assets/web.png"></a>
 
 # Credits
 - ***koirdev*** - _Programmer, Artist_
