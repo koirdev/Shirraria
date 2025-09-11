@@ -140,6 +140,8 @@ Released under [***MIT*** *License*](LICENSE)
 
 [Go to '*dev*' branch (Development builds)](https://github.com/koirdev/Shirraria/tree/dev)
 
+[Go to '*web*' branch (Web port)](https://github.com/koirdev/Shirraria/tree/web)
+
 
 ## (**The game is not finished because I am porting it to pygame**)
 ### ***Thank you for your attention!***
