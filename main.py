@@ -1,47 +1,19 @@
-from message_box import *
 from config import * 
 from sound_loader import *
 from graphics_loader import *
 from text_loader import *
 from openLinks import *
-import pygame, sys
+import pygame, sys, asyncio
 
 print("WARNING: This game is cancelled, this build has many unfinished and buggy features! Play at your own risk! There will be no more updates")
 
 # Checking init error
 game_init = pygame.init()
 if(game_init[1]>0):
-    MainCoreInitError()
+    print("Game Init Failed")
 
 # Window options
-if WINDOW_MODE == 2: # fullscreen
-    window = pygame.display.set_mode((WIDTH,HEIGHT),pygame.FULLSCREEN + pygame.SCALED)
-else:
-
-    if WINDOW_MODE == 0: # default window
-        WIDTH = 1280
-        HEIGHT = 720
-        window = pygame.display.set_mode((WIDTH, HEIGHT))
-    else:
-
-        if WINDOW_MODE == 1: # resizable window
-            WIDTH = 1600
-            HEIGHT = 900
-            window = pygame.display.set_mode((WIDTH, HEIGHT), pygame.RESIZABLE)
-
-        else:
-            if WINDOW_MODE == 3: # hardware render
-                window = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN + pygame.HWSURFACE + pygame.SCALED)
-            else:
-                WindowModeError()
-                sys.exit()
-
-if CONTROLS == 2:
-    pygame.joystick.init()
-    joystick = pygame.joystick.Joystick(0)
-    joystick.init()
-    if DEBUG_MODE == 1:
-        print(f"Initialized gamepad(s): {joystick.get_name()}")
+window = pygame.display.set_mode((WIDTH,HEIGHT))
 
 # Window title and icon
 pygame.display.set_caption("Shirraria")
@@ -50,10 +22,7 @@ pygame.display.set_icon(icon)
 clock = pygame.time.Clock()
 
 # Menu Sections
-if DEBUG_MODE == 1:
-    items = ['Level 1', 'Credits','Open Log file','GitHub page','Quit from game']
-else:
-    items = ['Play','Settings','Credits','Quit from game']
+items = ['Play','Settings','GitHub page','Open debug logs']
 
 selected_section = 0
 
@@ -66,17 +35,11 @@ character_x = 400
 character_y = 300
 character_speed = 5
 
-# Scene switcher
-current_scene = None
-def switch_scene(scene):
-    global current_scene
-    current_scene = scene
-
-def MainMenu():
-    global running, selected_section, shirLogo, CONTROLS
+async def MainMenu():
+    global running, selected_section, shirLogo, CONTROLS, TestStage
     running = True
     while running:
-        
+            
         # Quit Event
             for e in pygame.event.get():
                 if e.type == pygame.QUIT:
@@ -99,19 +62,19 @@ def MainMenu():
                         if SFX == 1:
                             whooshSound.play()
 
-             # Menu tabs
-                        if items[selected_section] == 'Quit from game': running = False, pygame.quit(), sys.exit()
-                        if items[selected_section] == 'Credits': credits_sign()
+            # Menu tabs
+                        if items[selected_section] == 'Credits': pass
                         if items[selected_section] == 'Level select': running = False, Level_Select()
                         if items[selected_section] == 'Level 1': running = False, Level_1()
-                        if items[selected_section] == 'Play': running = False, Level_1()
-                        if items[selected_section] == 'Open Log file': OpenLogFile()
+                        if items[selected_section] == 'Play': pass
+                        if items[selected_section] == 'Open Log file': pass
                         if items[selected_section] == 'GitHub page': OpenGitHubLink()
+                        if items[selected_section] == 'Open debug logs' : OpenDebugLinkLocal()
 
 
                     selected_section = selected_section % len(items)
 
-       # 'Q' Key to quit
+        # 'Q' Key to quit
             if e.type == pygame.KEYUP:
                 if e.key == pygame.K_q:
                     sys.exit()
@@ -125,14 +88,6 @@ def MainMenu():
                 window.blit(warning_text, (0,0))
             window.blit(help_text, (0,60))
 
-            # Credits Func       
-            def credits_sign():
-                    window.blit(credits_sign_img,(300,100))
-                    window.blit(credits_title,(500,130))
-                    window.blit(credits_koirdev,(350,200))
-                    window.blit(credits_venux,(350,300))
-                    window.blit(credits_JBoT,(350,400))
-                    window.blit(credits_motver,(350,500))
 
         # Render Menu
             for i in range(len(items)):
@@ -147,101 +102,19 @@ def MainMenu():
             if SPLASHES == 1:
                 window.blit(splash_text, (WIDTH // 2.7, HEIGHT // 170)) 
 
-        # Debug Func
-            if DEBUG_MODE == 1:
-                if WINDOW_MODE == 2:
-                    window.blit(fullscreen_text,(0,90))
-                if WINDOW_MODE == 1:
-                    window.blit(resizable_text, (0,90))
-                if WINDOW_MODE == 3:
-                    window.blit(hardware_render_text, (0,90))
-                if WINDOW_MODE == 0:
-                    window.blit(default_window_text, (0,90))
-
         # Update screen
             pygame.display.update()
             clock.tick(FPS)
-
-        # Show FPS on Console
-            if DEBUG_MODE == 1:
-                print(clock.get_fps())
+            await asyncio.sleep(0)
 
 
-
-def Level_1():
-    global running, character_y, character_x, character_speed
-    while running:
-
-       # Quit Event
-        for e in pygame.event.get():
-            if e.type == pygame.QUIT:
-                running = False
-                pygame.quit()
-                sys.exit()
-
-        # 'Q' Key to quit
-            if e.type == pygame.KEYUP:
-                if e.key == pygame.K_q:
-                    running = False
-                    pygame.quit()
-                    sys.exit()
-
-        # 'BACKSPACE' Key to back in menu
-            if e.type == pygame.KEYUP:
-                if e.key == pygame.K_BACKSPACE:
-                    switch_scene(MainMenu)
-                    click2Sound.play()
-                    running = False
-
-        # Player Controls
-        # Keyboard controls
-        if CONTROLS == 1:
-
-            keys = pygame.key.get_pressed()
-                
-            if keys[pygame.K_LSHIFT]:
-                character_speed = 10
-            else:
-                character_speed = 5
-                
-            if keys[pygame.K_LEFT]:
-                character_x -= character_speed
-
-            if keys[pygame.K_RIGHT]:
-                character_x += character_speed
-
-        # Gamepad controls
-        if CONTROLS == 2:
-
-            # Player movement
-            left_stick_x = joystick.get_axis(0)
-
-            character_x += left_stick_x * character_speed
-
-        # Player speed
-            if joystick.get_button(0):
-                character_speed = 10
-            else:
-                character_speed = 5
-
-        # Render images           
-        window.fill((82, 212, 255))
-        window.blit(build_info_text, (0,0))
-        window.blit(door1, (1000,100))
-        window.blit(character_img,(character_x, character_y))
-        window.blit(grass_img, (-100,500))
-
-        # Update screen
-        pygame.display.update()
-        clock.tick(FPS)
-
-        # Show FPS on Console
-        if DEBUG_MODE == 1:
-            print(clock.get_fps())
+asyncio.run(MainMenu())
 
 
-# Switch scene
-switch_scene(MainMenu)
-while current_scene is not None:
-    current_scene()
+
+
+
+
+    
+
 
