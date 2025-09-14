@@ -95,7 +95,7 @@ If you want to compile the game, you can also use "CMD" files for normal compila
    
  ***Next, copy the "assets" folder and paste it into the 'linux_build' folder and run the file called 'shirraria'***
 
-# Shirraria Configuration:
+# Configuration
 
 - ```WIDTH, HEIGHT``` - Screen Resolution
 - ```FPS``` - Count of frames *(To display the FPS value on the console, change the '```DEBUG_MODE```' value to '1')*
