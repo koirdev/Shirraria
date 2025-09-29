@@ -134,8 +134,6 @@ Released under [***MIT*** *License*](LICENSE)
 
 [ArchivoBlack License](https://github.com/Omnibus-Type/ArchivoBlack/blob/master/LICENSE.md)
 
-# [Tags](https://github.com/koirdev/Shirraria/tags)
-
 
 
 ## (**The game is not finished because I am porting it to pygame**)
