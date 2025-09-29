@@ -136,7 +136,9 @@ Released under [***MIT*** *License*](LICENSE)
 
 
 
-## (**The game is not finished because I am porting it to pygame**)
+<!--## (**The game is not finished because I am porting it to pygame**)-->
+
+
 ### ***Thank you for your attention!***
 ##### *Written with love*
 
