@@ -69,7 +69,7 @@ https://pyinstaller.org/en/stable/
 
       ```pyinstaller --noconsole -F --distpath win_build -n shirraria main.py``` - (*Normal compilation*)
    
-      ```pyinstaller -F --distpath win_build -n shirraria main.py``` - (*For debugging* - ***Don't forget to change the*** "```DEBUG_MODE```" ***parameter to "1" in the game's configuration file before compiling***)
+      ```pyinstaller -F --debug all --distpath win_build -n shirraria main.py``` - (*For debugging* - ***Don't forget to change the*** "```DEBUG_MODE```" ***parameter to "1" in the game's configuration file before compiling***)
 
 If you want to compile the game, you can also use "CMD" files for normal compilation - "_compile_to_exe.cmd_", for debug compilation - "_compile_to_exe_WITH_CONSOLE.cmd_" If you want to remove compiled files then use - "_remove_compiled_files.cmd_"
 
