@@ -134,13 +134,8 @@ Released under [***MIT*** *License*](LICENSE)
 
 [ArchivoBlack License](https://github.com/Omnibus-Type/ArchivoBlack/blob/master/LICENSE.md)
 
-# Branches
+# [Tags](https://github.com/koirdev/Shirraria/tags)
 
-[Go to '*backup*' branch](https://github.com/koirdev/Shirraria/tree/backup)
-
-[Go to '*dev*' branch (Development builds)](https://github.com/koirdev/Shirraria/tree/dev)
-
-[Go to '*web*' branch (Web port)](https://github.com/koirdev/Shirraria/tree/web)
 
 
 ## (**The game is not finished because I am porting it to pygame**)
