@@ -1,3 +1,9 @@
+# ***Warning!***
+- ***Official support for Shirraria has ended. Thanks everyone***
+- This repository will become an archive.
+---
+
+
 # Shirraria
 
 *A non-commercial, open source game written using Python and the Pygame library* 
