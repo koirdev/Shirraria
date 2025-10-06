@@ -1,5 +1,5 @@
 # ***Warning!***
-- ***Official support for Shirraria has ended. Thanks everyone***
+- ***Official support and development of Shirraria has ended. Thanks everyone***
 - This repository will become an archive.
 ---
 
